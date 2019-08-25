@@ -1,0 +1,54 @@
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+          <div class="row">
+              <div class="col-md-6 grid-margin stretch-card">
+                <h4 class="card-title">Questions</h4>
+              </div>
+              <div class="col-md-6 grid-margin stretch-card">
+                <a href="/addQuestion"><button type="button" class="btn btn-gradient-primary btn-fw">Add New Question</button></a>
+              </div>
+          </div>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>
+                #
+              </th>
+              <th>
+                Question
+              </th>
+              <th>
+                Subject
+              </th>
+              <th>
+                Status
+              </th>
+              <th>
+                Group
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let question of questionList; let i = index">
+              <td>
+                {{i + 1}}
+              </td>
+              <td>
+                {{question.question}}
+              </td>
+              <td>
+                {{question.subject}}
+              </td>
+              <td>
+                <div class="badge badge-gradient-warning">{{question.status}}</div>
+              </td>
+              <td>
+                {{question.groupName}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
